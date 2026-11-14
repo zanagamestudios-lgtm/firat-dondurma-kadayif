@@ -10,7 +10,7 @@ window.FIRAT = {
       id: "kadayif", baslik: "Kadayıf", aciklama: "Bakır tepside, ocak başında, sipariş üzerine pişer.",
       urunler: [
         { id: "tepsi", ad: "1 Tepsi Kadayıf", not: "Kalabalık sofralar için", fiyat: 400, gorsel: "assets/kunefe-kare.jpg", one: true },
-        { id: "yarim-tepsi", ad: "Yarım Tepsi Kadayıf", not: "2–3 kişilik", fiyat: 200, gorsel: "assets/tepsiler-yakin.jpg" },
+        { id: "yarim-tepsi", ad: "Yarım Tepsi Kadayıf", not: "2–3 kişilik", fiyat: 200, gorsel: "assets/yarim-tepsi.jpg" },
         { id: "porsiyon-kadayif", ad: "Tek Kişilik Porsiyon Kadayıf", not: "Sıcak servis", fiyat: 100, gorsel: "assets/porsiyon-kunefe.jpg" },
         { id: "tel", ad: "1 Kilo Kadayıf Teli", not: "Evde yapmak isteyenlere, günlük çekim", fiyat: 100, gorsel: "assets/kadayif-teli.jpg" },
         { id: "serbet", ad: "1 Torba Şerbet", not: "Kadayıfın hazır şerbeti", fiyat: 50 }
