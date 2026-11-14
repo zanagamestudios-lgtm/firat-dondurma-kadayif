@@ -1,0 +1,180 @@
+@font-face{font-family:"Fraunces";src:url("assets/fonts/Fraunces.ttf") format("truetype");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Figtree";src:url("assets/fonts/Figtree.ttf") format("truetype");font-weight:300 900;font-display:swap}
+
+:root{
+  --kavruk:#2A1509;      /* koyu kahve: zemin, yazı */
+  --kavruk-2:#3D2110;
+  --kunefe:#E08A1E;      /* kızarmış kadayıf: ana vurgu */
+  --kunefe-koyu:#B9650F;
+  --bal:#F4B94A;         /* şerbet parlaması */
+  --fistik:#7C9A2E;      /* fıstık: ikincil vurgu */
+  --kaymak:#FFF6E6;      /* açık zemin */
+  --kaymak-2:#F6E7CD;
+  --sut:#FFFFFF;
+  --wa:#1FA855;
+  --cizgi:rgba(42,21,9,.14);
+  --golge:0 10px 30px rgba(42,21,9,.14);
+  --yaricap:18px;
+  --baslik:"Fraunces",Georgia,serif;
+  --govde:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--kaymak);color:var(--kavruk);font-family:var(--govde);font-size:17px;line-height:1.5;padding-bottom:env(safe-area-inset-bottom)}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--baslik);font-weight:600;line-height:1.05;margin:0;letter-spacing:-.01em;font-variation-settings:"SOFT" 100,"opsz" 144}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--bal);outline-offset:3px;border-radius:8px}
+
+/* ÜST ÇUBUK */
+.ust{position:absolute;inset:0 0 auto 0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 16px;padding-top:max(10px,env(safe-area-inset-top));background:linear-gradient(rgba(42,21,9,.82),rgba(42,21,9,0));color:var(--kaymak)}
+.marka{display:flex;align-items:center;gap:10px;text-decoration:none}
+.marka span{display:flex;flex-direction:column;line-height:1}
+.marka b{font-family:var(--baslik);font-size:22px;font-weight:700;letter-spacing:.01em}
+.marka i{font-style:normal;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--bal);margin-top:3px}
+.ara-kisa{display:flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;font-size:14px;padding:9px 14px;border-radius:999px;background:rgba(255,246,230,.14);border:1px solid rgba(255,246,230,.35);backdrop-filter:blur(6px);white-space:nowrap}
+
+/* KAHRAMAN */
+.kahraman{position:relative;min-height:100svh;display:flex;align-items:flex-end;background:var(--kavruk);color:var(--kaymak);overflow:hidden}
+.kahraman-foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.kahraman::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(42,21,9,.25) 0%,rgba(42,21,9,.05) 30%,rgba(42,21,9,.72) 62%,rgba(42,21,9,.97) 100%)}
+.kahraman-ic{position:relative;z-index:1;width:100%;max-width:760px;padding:0 20px 44px;margin:0 auto}
+.ust-yazi{font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--bal);font-weight:700;margin-bottom:14px}
+.kahraman h1{font-size:clamp(44px,12.5vw,84px);font-weight:650;text-wrap:balance}
+.kahraman h1 em{font-style:italic;font-weight:400;color:var(--bal)}
+.alt-yazi{margin-top:16px;font-size:18px;max-width:30ch;color:rgba(255,246,230,.86)}
+.kahraman-dugmeler{display:flex;gap:10px;margin-top:26px}
+
+.dugme{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:54px;padding:0 24px;border-radius:999px;font:700 17px var(--govde);text-decoration:none;border:0;cursor:pointer;transition:transform .15s ease,background .15s ease;-webkit-tap-highlight-color:transparent}
+.dugme:active{transform:scale(.97)}
+.dugme-ana{background:var(--kunefe);color:var(--kavruk);box-shadow:0 8px 24px rgba(224,138,30,.4);flex:1 1 auto}
+.dugme-ana:hover{background:var(--bal)}
+.dugme-cizgi{background:transparent;color:var(--kaymak);border:1.5px solid rgba(255,246,230,.5)}
+.dugme-cizgi.koyu{color:var(--kavruk);border-color:var(--cizgi)}
+.dugme-wa{background:var(--wa);color:#fff}
+.dugme-wa:hover{background:#178a45}
+.dugme.buyuk{width:100%;min-height:58px;font-size:18px}
+
+/* ŞERİT */
+.serit{display:grid;grid-template-columns:1fr;background:var(--kavruk);color:var(--kaymak);padding:4px 20px 26px;gap:0}
+.serit div{padding:14px 0;border-top:1px solid rgba(255,246,230,.14);display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.serit b{font-family:var(--baslik);font-size:19px;font-weight:600}
+.serit span{font-size:14px;color:rgba(255,246,230,.66);text-align:right}
+
+/* MENÜ */
+.menu{max-width:760px;margin:0 auto;padding:44px 16px 24px;scroll-margin-top:0}
+.menu-bas h2{font-size:clamp(40px,10vw,60px)}
+.menu-bas p{margin-top:8px;color:rgba(42,21,9,.7)}
+.sekmeler{position:sticky;top:0;z-index:10;display:flex;gap:8px;overflow-x:auto;padding:14px 16px;margin:14px -16px 6px;background:rgba(255,246,230,.94);backdrop-filter:blur(8px);scrollbar-width:none}
+.sekmeler::-webkit-scrollbar{display:none}
+.sekmeler a{flex:0 0 auto;text-decoration:none;font-weight:700;font-size:15px;padding:10px 18px;border-radius:999px;border:1.5px solid var(--cizgi);background:var(--sut)}
+.sekmeler a.secili{background:var(--kavruk);color:var(--kaymak);border-color:var(--kavruk)}
+
+.kategori{scroll-margin-top:70px;padding-top:22px}
+.kategori h3{font-size:32px}
+.kategori>p{color:rgba(42,21,9,.66);font-size:15px;margin-top:4px}
+.urunler{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:10px}
+.urun{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:14px;background:var(--sut);border:1px solid var(--cizgi);border-radius:var(--yaricap);padding:12px}
+.urun.one{grid-template-columns:1fr;padding:0;overflow:hidden;box-shadow:var(--golge)}
+.urun.one .gorsel{width:100%;height:210px;border-radius:0}
+.urun.one .one-alt{display:grid;grid-template-columns:1fr auto;align-items:center;gap:14px;padding:14px}
+.gorsel{width:76px;height:76px;border-radius:14px;object-fit:cover;background:var(--kaymak-2)}
+.gorsel.bos{display:grid;place-items:center;color:var(--kunefe-koyu)}
+.urun h4{margin:0;font:700 17px/1.2 var(--govde)}
+.urun .not{font-size:13.5px;color:rgba(42,21,9,.6);margin-top:2px}
+.urun .fiyat{font-family:var(--baslik);font-weight:600;font-size:21px;margin-top:4px;color:var(--kunefe-koyu)}
+.rozet{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;background:var(--fistik);color:#fff;padding:3px 9px;border-radius:999px;margin-bottom:6px}
+
+.adet{display:flex;align-items:center;gap:2px}
+.adet button{width:44px;height:44px;border-radius:50%;border:0;font:700 24px/1 var(--govde);cursor:pointer;background:var(--kunefe);color:var(--kavruk);display:grid;place-items:center;-webkit-tap-highlight-color:transparent}
+.adet button.eksi{background:var(--kaymak-2)}
+.adet output{min-width:30px;text-align:center;font-weight:800;font-size:18px}
+.adet[data-adet="0"] .eksi,.adet[data-adet="0"] output{display:none}
+.ekle-yazi{display:none}
+
+/* DÜKKÂN */
+.dukkan{background:var(--kavruk);color:var(--kaymak);margin-top:40px}
+.dukkan img{width:100%;height:300px;object-fit:cover}
+.dukkan-yazi{max-width:760px;margin:0 auto;padding:30px 20px 44px}
+.dukkan h2{font-size:clamp(34px,8.5vw,52px);text-wrap:balance}
+.dukkan p{margin:14px 0 22px;color:rgba(255,246,230,.82);max-width:46ch}
+.dukkan .dugme{flex:none}
+
+/* İLETİŞİM */
+.iletisim{max-width:760px;margin:0 auto;padding:40px 16px 30px;display:grid;gap:20px}
+.iletisim img{border-radius:var(--yaricap);height:230px;width:100%;object-fit:cover;object-position:50% 40%}
+.iletisim h2{font-size:38px}
+.iletisim .tel a{font-family:var(--baslik);font-size:36px;font-weight:600;text-decoration:none;color:var(--kunefe-koyu);display:inline-block;margin:8px 0 2px}
+.iletisim-dugmeler{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.iletisim-dugmeler .dugme{flex:1 1 200px}
+
+.alt{background:var(--kavruk);color:rgba(255,246,230,.8);display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;padding:28px 16px 120px;font-size:14px}
+.alt b{color:var(--kaymak)}
+
+/* SEPET ÇUBUĞU */
+.sepet-cubuk{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:linear-gradient(rgba(255,246,230,0),rgba(255,246,230,.96) 40%)}
+.sepet-cubuk button{width:100%;max-width:736px;margin:0 auto;display:flex;align-items:center;gap:12px;min-height:60px;padding:0 18px 0 10px;border:0;border-radius:999px;background:var(--kavruk);color:var(--kaymak);font:700 17px var(--govde);cursor:pointer;box-shadow:0 12px 30px rgba(42,21,9,.35)}
+.sepet-adet{width:42px;height:42px;border-radius:50%;background:var(--kunefe);color:var(--kavruk);display:grid;place-items:center;font-weight:800}
+.sepet-yazi{flex:1;text-align:left}
+.sepet-tutar{font-family:var(--baslik);font-size:21px;color:var(--bal)}
+
+/* PANEL */
+.panel{border:0;padding:0;width:100%;max-width:560px;max-height:92dvh;margin:auto auto 0;border-radius:24px 24px 0 0;background:var(--kaymak);color:var(--kavruk);overflow:hidden}
+.panel[open]{display:flex;flex-direction:column;animation:yukari .28s cubic-bezier(.2,.8,.2,1)}
+.panel::backdrop{background:rgba(42,21,9,.6);backdrop-filter:blur(3px)}
+@keyframes yukari{from{transform:translateY(40px);opacity:0}}
+.panel-ust{display:flex;align-items:center;justify-content:space-between;padding:18px 20px 12px;border-bottom:1px solid var(--cizgi);margin:0}
+.panel-ust h2{font-size:28px}
+.kapat{width:44px;height:44px;border-radius:50%;border:0;background:var(--kaymak-2);font-size:18px;cursor:pointer;color:var(--kavruk)}
+.panel-govde{overflow-y:auto;padding:14px 20px calc(24px + env(safe-area-inset-bottom));-webkit-overflow-scrolling:touch}
+.sepet-liste{list-style:none;margin:0;padding:0}
+.sepet-liste li{display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:10px;padding:10px 0;border-bottom:1px dashed var(--cizgi)}
+.sepet-liste .ad{font-weight:600;font-size:16px}
+.sepet-liste .tutar{font-weight:700;min-width:64px;text-align:right}
+.sepet-liste .adet button{width:36px;height:36px;font-size:20px}
+.toplam{display:flex;justify-content:space-between;align-items:baseline;padding:14px 0 18px}
+.toplam span{font-weight:700}
+.toplam b{font-family:var(--baslik);font-size:32px;color:var(--kunefe-koyu)}
+.secim{border:0;padding:0;margin:0 0 14px;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.secim legend{font-weight:700;font-size:14px;margin-bottom:6px;padding:0}
+.secim label{position:relative}
+.secim input{position:absolute;opacity:0;inset:0}
+.secim span{display:grid;place-items:center;min-height:50px;border-radius:14px;border:1.5px solid var(--cizgi);background:var(--sut);font-weight:700;cursor:pointer}
+.secim input:checked+span{background:var(--kavruk);color:var(--kaymak);border-color:var(--kavruk)}
+.secim input:focus-visible+span{outline:3px solid var(--bal);outline-offset:2px}
+.alan{display:block;font-weight:700;font-size:14px;margin-bottom:12px}
+.alan small{font-weight:400;opacity:.6}
+.alan input,.alan textarea{display:block;width:100%;margin-top:6px;padding:14px;border-radius:14px;border:1.5px solid var(--cizgi);background:var(--sut);font:500 16px var(--govde);color:var(--kavruk);resize:vertical}
+.alan input:focus,.alan textarea:focus{outline:0;border-color:var(--kunefe);box-shadow:0 0 0 3px rgba(224,138,30,.25)}
+.hata{background:#FBE3DC;color:#8A2410;border-radius:12px;padding:10px 14px;font-weight:600;font-size:14.5px;margin-bottom:12px}
+.bilgi{font-size:13px;color:rgba(42,21,9,.62);margin-top:12px;text-align:center}
+.bos-sepet{padding:26px 0;text-align:center;color:rgba(42,21,9,.6)}
+
+/* GENİŞ EKRAN */
+@media (min-width:820px){
+  .ust{padding:14px 32px}
+  .kahraman-ic{max-width:1120px;padding:0 32px 72px}
+  .kahraman-dugmeler{max-width:440px}
+  .alt-yazi{font-size:20px}
+  .serit{grid-template-columns:repeat(3,1fr);padding:0 32px;gap:32px}
+  .serit div{flex-direction:column;align-items:flex-start;gap:2px;padding:22px 0;border-top:1px solid rgba(255,246,230,.14)}
+  .serit span{text-align:left}
+  .menu{max-width:1120px;padding:64px 32px 32px}
+  .sekmeler{margin:18px 0 6px;padding:14px 0}
+  .urunler{grid-template-columns:repeat(2,1fr)}
+  .urun.one{grid-column:1/-1;grid-template-columns:1.2fr 1fr}
+  .urun.one .gorsel{height:300px}
+  .urun.one .one-alt{padding:28px;grid-template-columns:1fr;align-content:center;justify-items:start}
+  .urun.one h4{font-family:var(--baslik);font-size:34px;font-weight:600}
+  .dukkan{display:grid;grid-template-columns:1.1fr 1fr;align-items:center}
+  .dukkan img{height:460px}
+  .dukkan-yazi{padding:40px 48px}
+  .iletisim{max-width:1120px;grid-template-columns:1fr 1fr;align-items:center;gap:40px;padding:72px 32px}
+  .iletisim img{height:340px}
+  .panel{margin:auto;border-radius:24px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+.afis{width:100%;height:200px;object-fit:cover;object-position:50% 35%;border-radius:var(--yaricap);margin-top:14px}
+@media (min-width:820px){.afis{height:320px}}

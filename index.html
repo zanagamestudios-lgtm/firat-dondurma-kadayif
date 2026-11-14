@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fırat Dondurma &amp; Kadayıf — Online Sipariş | Şanlıurfa</title>
+<meta name="description" content="Fırat Dondurma & Kadayıf, Şanlıurfa. Ocak başında pişen sıcak kadayıf ve dondurma. Online sipariş: 0543 624 66 40">
+<meta name="theme-color" content="#2A1509">
+<meta property="og:title" content="Fırat Dondurma & Kadayıf — Online Sipariş">
+<meta property="og:description" content="Sıcak kadayıf, soğuk dondurma. Hemen sipariş ver.">
+<meta property="og:image" content="assets/kunefe.jpg">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/Fraunces.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="stil.css">
+</head>
+<body>
+
+<header class="ust">
+  <a class="marka" href="#ust" aria-label="Fırat Dondurma & Kadayıf">
+    <img src="assets/logo.svg" alt="" width="40" height="40">
+    <span><b>Fırat</b><i>Dondurma &amp; Kadayıf</i></span>
+  </a>
+  <a class="ara-kisa" href="tel:+905436246640" aria-label="Ara: 0543 624 66 40">
+    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+    <span>0543 624 66 40</span>
+  </a>
+</header>
+
+<main id="ust">
+  <section class="kahraman">
+    <img class="kahraman-foto" src="assets/kunefe.jpg" alt="Bakır tepside nar gibi kızarmış kadayıf" fetchpriority="high">
+    <div class="kahraman-ic">
+      <p class="ust-yazi">Şanlıurfa · Ocak başında</p>
+      <h1>Sıcak kadayıf,<br><em>soğuk dondurma.</em></h1>
+      <p class="alt-yazi">Bakır tepside, sipariş üzerine pişer. Sıcak sıcak sofranıza gelsin.</p>
+      <div class="kahraman-dugmeler">
+        <a class="dugme dugme-ana" href="#menu">Hemen Sipariş Ver</a>
+        <a class="dugme dugme-cizgi" href="tel:+905436246640">Ara</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="serit" aria-label="Öne çıkanlar">
+    <div><b>Sipariş üzerine</b><span>Tepsi ocaktan iner, yola çıkar</span></div>
+    <div><b>Günlük kadayıf teli</b><span>Kendi tezgâhımızda çekilir</span></div>
+    <div><b>Tepsi 400 ₺</b><span>Porsiyon 100 ₺</span></div>
+  </section>
+
+  <section class="menu" id="menu">
+    <div class="menu-bas">
+      <h2>Menü</h2>
+      <p>Ürünü seç, adedi ayarla, siparişi WhatsApp'tan gönder.</p>
+    </div>
+    <nav class="sekmeler" id="sekmeler" aria-label="Menü bölümleri"></nav>
+    <div id="liste"></div>
+  </section>
+
+  <section class="dukkan">
+    <img src="assets/tepsiler.jpg" alt="Ocak başında sıra sıra kadayıf tepsileri" loading="lazy">
+    <div class="dukkan-yazi">
+      <h2>Tepsi tepsi, ocak başında</h2>
+      <p>Kadayıf telini kendimiz çekeriz, tepsiye kendimiz dizeriz. Her tepsi ayrı ocakta, göz önünde kızarır. İster dükkânda yiyin, ister paket yaptırın.</p>
+      <a class="dugme dugme-ana" href="#menu">Sipariş Ver</a>
+    </div>
+  </section>
+
+  <section class="iletisim" id="iletisim">
+    <img src="assets/dukkan.jpg" alt="Fırat Dondurma & Kadayıf dükkânının önü" loading="lazy">
+    <div>
+      <h2>Bize ulaşın</h2>
+      <p class="tel"><a href="tel:+905436246640">0543 624 66 40</a></p>
+      <p>Şanlıurfa</p>
+      <div class="iletisim-dugmeler">
+        <a class="dugme dugme-wa" id="waDogrudan" href="https://wa.me/905436246640" target="_blank" rel="noopener">WhatsApp'tan yaz</a>
+        <a class="dugme dugme-cizgi koyu" href="tel:+905436246640">Telefonla ara</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="alt">
+  <img src="assets/logo.svg" alt="" width="44" height="44">
+  <p><b>Fırat Dondurma &amp; Kadayıf</b> · Şanlıurfa · 0543 624 66 40</p>
+</footer>
+
+<!-- Sepet çubuğu -->
+<div class="sepet-cubuk" id="sepetCubuk" hidden>
+  <button type="button" id="sepetAc">
+    <span class="sepet-adet" id="sepetAdet">0</span>
+    <span class="sepet-yazi">Siparişi Tamamla</span>
+    <span class="sepet-tutar" id="sepetTutar">0 ₺</span>
+  </button>
+</div>
+
+<!-- Sipariş paneli -->
+<dialog class="panel" id="panel" aria-labelledby="panelBaslik">
+  <form method="dialog" class="panel-ust">
+    <h2 id="panelBaslik">Siparişiniz</h2>
+    <button class="kapat" aria-label="Kapat" value="kapat">✕</button>
+  </form>
+  <div class="panel-govde">
+    <ul class="sepet-liste" id="sepetListe"></ul>
+    <div class="toplam"><span>Toplam</span><b id="panelToplam">0 ₺</b></div>
+
+    <form id="siparisForm" novalidate>
+      <fieldset class="secim">
+        <legend>Teslimat</legend>
+        <label><input type="radio" name="teslimat" value="Adrese teslim" checked><span>Adrese teslim</span></label>
+        <label><input type="radio" name="teslimat" value="Gel al"><span>Gel al</span></label>
+      </fieldset>
+      <label class="alan">Ad Soyad
+        <input name="ad" autocomplete="name" required placeholder="Adınız">
+      </label>
+      <label class="alan">Telefon
+        <input name="tel" type="tel" inputmode="tel" autocomplete="tel" required placeholder="05xx xxx xx xx">
+      </label>
+      <label class="alan" id="adresAlan">Adres
+        <textarea name="adres" rows="2" autocomplete="street-address" placeholder="Mahalle, sokak, bina no, daire"></textarea>
+      </label>
+      <label class="alan">Not <small>(isteğe bağlı)</small>
+        <input name="not" placeholder="Örn. saat 20:00'de hazır olsun">
+      </label>
+      <p class="hata" id="hata" role="alert" hidden></p>
+      <button class="dugme dugme-wa buyuk" type="submit">Siparişi WhatsApp'tan Gönder</button>
+      <p class="bilgi">Sipariş mesajınız WhatsApp'ta hazır açılır, "Gönder"e basmanız yeterli. Ödeme teslimatta alınır. Teslimat bölgesi ve süresi telefonda teyit edilir.</p>
+    </form>
+  </div>
+</dialog>
+
+<script src="menu.js"></script>
+<script src="uygulama.js"></script>
+</body>
+</html>
